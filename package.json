@@ -1,5 +1,5 @@
 {
-  "name": "job.js",
+  "name": "runjob",
   "version": "1.0.0",
   "description": "A Javascript jobrunner with human syntax",
   "main": "main.js",

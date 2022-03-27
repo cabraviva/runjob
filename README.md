@@ -1,4 +1,4 @@
-# job.js
+# runjob
  A Javascript Jobrunner with human syntax
 
 # Features
@@ -8,12 +8,12 @@
 
 # Install
 ```sh
-npm install job.js
+npm install runjob
 ```
 
 # Import
 ```js
-const Job = require('job.js')
+const Job = require('runjob')
 ```
 
 # Creating a Job
