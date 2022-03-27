@@ -39,6 +39,16 @@ class Job {
             },
             every: function (interval) {
                 return {
+                    ms: function () {
+                        currentJob.addExecutionLiteral(`every ${interval} ms`)
+                        currentJob.interval.push(setInterval(currentJob.run.now, interval))
+                        return currentJob
+                    },
+                    miliseconds: function () {
+                        currentJob.addExecutionLiteral(`every ${interval} ms`)
+                        currentJob.interval.push(setInterval(currentJob.run.now, interval))
+                        return currentJob
+                    },
                     seconds: function () {
                         currentJob.addExecutionLiteral(`every ${interval} seconds`)
                         interval = interval * 1000
@@ -134,6 +144,16 @@ class Job {
             },
             in: function (timeout) {
                 return {
+                    ms: function () {
+                        currentJob.addExecutionLiteral(`in ${timeout} ms`)
+                        currentJob.timeout.push(setTimeout(currentJob.run.now, timeout))
+                        return currentJob
+                    },
+                    miliseconds: function () {
+                        currentJob.addExecutionLiteral(`in ${timeout} ms`)
+                        currentJob.timeout.push(setTimeout(currentJob.run.now, timeout))
+                        return currentJob
+                    },
                     seconds: function () {
                         currentJob.addExecutionLiteral(`in ${timeout} seconds`)
                         timeout = timeout * 1000
