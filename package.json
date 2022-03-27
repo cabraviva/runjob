@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greencoder001/job.js.git"
+    "url": "git+https://github.com/greencoder001/runjob.git"
   },
   "keywords": [
     "job",
@@ -21,9 +21,9 @@
   "author": "greencoder001",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/greencoder001/job.js/issues"
+    "url": "https://github.com/greencoder001/runjob/issues"
   },
-  "homepage": "https://github.com/greencoder001/job.js#readme",
+  "homepage": "https://github.com/greencoder001/runjob#readme",
   "dependencies": {
     "uuid": "^8.3.2"
   }
