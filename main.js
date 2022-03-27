@@ -2,6 +2,10 @@ const { handle } = require('express/lib/application')
 
 const uuid = require('uuid').v4
 
+function isDateObject (d) {
+    return d instanceof Date
+}
+
 class Job {
     constructor (fn, name = 'Job') {
         this.fn = fn
@@ -36,6 +40,17 @@ class Job {
                     } catch (_e) {}
                     
                 })
+            },
+            at: function (date) {
+                if (isDateObject(date)) {
+                    currentJob.addExecutionLiteral(`at ${date}`)
+                    currentJob.timeout.push(setTimeout(currentJob.run.now, date.getTime() - Date.now()))
+                } else {
+                    if (!isNaN(date)) {
+                        currentJob.addExecutionLiteral(`at ${new Date(date)}`)
+                        currentJob.timeout.push(setTimeout(currentJob.run.now, date - Date.now()))
+                    }
+                }
             },
             every: function (interval) {
                 return {
