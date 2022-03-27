@@ -1,0 +1,30 @@
+{
+  "name": "job.js",
+  "version": "1.0.0",
+  "description": "A Javascript jobrunner with human syntax",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greencoder001/job.js.git"
+  },
+  "keywords": [
+    "job",
+    "jobrunner",
+    "runner",
+    "cron",
+    "cronjob",
+    "job.js"
+  ],
+  "author": "greencoder001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greencoder001/job.js/issues"
+  },
+  "homepage": "https://github.com/greencoder001/job.js#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
