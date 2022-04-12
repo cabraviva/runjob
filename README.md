@@ -75,7 +75,7 @@ Job.tree()
 ```
 
 # Queues
-A queue handles jobs successively and fires an event when the queue is empty. Queues also work like they are a job, so you can use something like ````myQueue.run.in(2).seconds()``` to handle it at a certain time.
+A queue handles jobs successively and fires an event when the queue is empty. Queues also work like they are a job, so you can use something like `myQueue.run.in(2).seconds()` to handle it at a certain time.
 
 ## Creating a Queue
 ```js
@@ -83,7 +83,7 @@ const myQueue = new Job.Queue()
 ```
 
 ## Adding Jobs to a queue
-First you need to create a few jobs. The you can add them to the queue like this:
+First you need to create a few jobs. Then you can add them to the queue like this:
 ```js
 myQueue.add(jobOne, jobTwo)
 myQueue.add(jobThree)
